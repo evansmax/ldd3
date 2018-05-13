@@ -1,2 +1,2 @@
-# lld3
-study lld3
+# ldd3
+study ldd3
