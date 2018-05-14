@@ -24,14 +24,15 @@ extern int scull_nr_devs;
 
 #include <linux/kernel.h>	/* printk() */
 #include <linux/types.h>	/* dev_t *///
-#include <linux/fs.h>		/* int register_chrdev_region(dev_t first, unsigned int count, char *name);
+#include <linux/fs.h>		/* filesystem
+				 * int register_chrdev_region(dev_t first, unsigned int count, char *name);
 			   	 * int alloc_chrdev_region(dev_t *dev, unsigned int firstminor,unsigned int count,char *name);
 			   	 * void unregister_chrdev_region(dev_t first, unsigned int count);
 				 *///
 #include <linux/cdev.h>		/* kdev_t.h [
-			   	 *	MAJOR(dev_t dev);
-				 *	MINOR(dev_t dev);
-				 *	MKDEV(int major, int minor);
+			   	 *	int MAJOR(dev_t dev);
+				 *	int MINOR(dev_t dev);
+				 *	dev_t MKDEV(unsigned int major, unsigned int minor);
 				 *	]
 			 	 *///
 
